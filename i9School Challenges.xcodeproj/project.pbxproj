@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064BEF34ABAFC875081E4A9A /* libPods-i9School Challenges.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A489EAB490400123213F2A /* libPods-i9School Challenges.a */; };
 		275BDC9D203B0F3200F8CBE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 275BDC9C203B0F3200F8CBE7 /* AppDelegate.m */; };
 		275BDCA0203B0F3200F8CBE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275BDC9F203B0F3200F8CBE7 /* ViewController.m */; };
 		275BDCA3203B0F3200F8CBE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275BDCA1203B0F3200F8CBE7 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 		275BDCA7203B0F3200F8CBE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		275BDCA9203B0F3200F8CBE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		275BDCAA203B0F3200F8CBE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46A489EAB490400123213F2A /* libPods-i9School Challenges.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-i9School Challenges.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA82EC56EA7A0E2FAD9B9D4 /* Pods-i9School Challenges.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-i9School Challenges.debug.xcconfig"; path = "Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges.debug.xcconfig"; sourceTree = "<group>"; };
+		CC6A89CC7FD7AAF14B09AFA2 /* Pods-i9School Challenges.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-i9School Challenges.release.xcconfig"; path = "Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064BEF34ABAFC875081E4A9A /* libPods-i9School Challenges.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				275BDC9A203B0F3200F8CBE7 /* i9School Challenges */,
 				275BDC99203B0F3200F8CBE7 /* Products */,
+				87AACA6BF92867D33EA2F6D8 /* Pods */,
+				F2B004139EEF530360B37B22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +78,23 @@
 			path = "i9School Challenges";
 			sourceTree = "<group>";
 		};
+		87AACA6BF92867D33EA2F6D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DA82EC56EA7A0E2FAD9B9D4 /* Pods-i9School Challenges.debug.xcconfig */,
+				CC6A89CC7FD7AAF14B09AFA2 /* Pods-i9School Challenges.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2B004139EEF530360B37B22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46A489EAB490400123213F2A /* libPods-i9School Challenges.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 275BDCAE203B0F3200F8CBE7 /* Build configuration list for PBXNativeTarget "i9School Challenges" */;
 			buildPhases = (
+				9487CA7E3E3193C3C1D7A926 /* [CP] Check Pods Manifest.lock */,
 				275BDC94203B0F3200F8CBE7 /* Sources */,
 				275BDC95203B0F3200F8CBE7 /* Frameworks */,
 				275BDC96203B0F3200F8CBE7 /* Resources */,
+				F288F5A7F8B0169EB3B49C30 /* [CP] Embed Pods Frameworks */,
+				3EAFCFE32FF9A5E6993915BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EAFCFE32FF9A5E6993915BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9487CA7E3E3193C3C1D7A926 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F288F5A7F8B0169EB3B49C30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		275BDC94203B0F3200F8CBE7 /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		275BDCAF203B0F3200F8CBE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA82EC56EA7A0E2FAD9B9D4 /* Pods-i9School Challenges.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +366,7 @@
 		};
 		275BDCB0203B0F3200F8CBE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC6A89CC7FD7AAF14B09AFA2 /* Pods-i9School Challenges.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
