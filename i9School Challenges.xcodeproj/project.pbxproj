@@ -14,6 +14,11 @@
 		275BDCAB203B0F3200F8CBE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 275BDCAA203B0F3200F8CBE7 /* main.m */; };
 		27D98735203B14B5005B21CB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D98734203B14B5005B21CB /* HomeViewController.m */; };
 		27D98737203B14C4005B21CB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D98736203B14C4005B21CB /* Home.storyboard */; };
+		27D9873A203B17F3005B21CB /* itaufonts_master_24px_v1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D98739203B17F3005B21CB /* itaufonts_master_24px_v1.ttf */; };
+		27D9873F203B181E005B21CB /* ItauText_A_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D9873B203B181E005B21CB /* ItauText_A_Bd.ttf */; };
+		27D98740203B181E005B21CB /* ItauText_A_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D9873C203B181E005B21CB /* ItauText_A_Lt.ttf */; };
+		27D98741203B181E005B21CB /* ItauText_A_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D9873D203B181E005B21CB /* ItauText_A_Rg.ttf */; };
+		27D98742203B181E005B21CB /* ItauText_A_XBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D9873E203B181E005B21CB /* ItauText_A_XBd.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		27D98733203B14B5005B21CB /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		27D98734203B14B5005B21CB /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		27D98736203B14C4005B21CB /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		27D98739203B17F3005B21CB /* itaufonts_master_24px_v1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = itaufonts_master_24px_v1.ttf; sourceTree = "<group>"; };
+		27D9873B203B181E005B21CB /* ItauText_A_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItauText_A_Bd.ttf; sourceTree = "<group>"; };
+		27D9873C203B181E005B21CB /* ItauText_A_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItauText_A_Lt.ttf; sourceTree = "<group>"; };
+		27D9873D203B181E005B21CB /* ItauText_A_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItauText_A_Rg.ttf; sourceTree = "<group>"; };
+		27D9873E203B181E005B21CB /* ItauText_A_XBd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItauText_A_XBd.ttf; sourceTree = "<group>"; };
 		46A489EAB490400123213F2A /* libPods-i9School Challenges.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-i9School Challenges.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA82EC56EA7A0E2FAD9B9D4 /* Pods-i9School Challenges.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-i9School Challenges.debug.xcconfig"; path = "Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges.debug.xcconfig"; sourceTree = "<group>"; };
 		CC6A89CC7FD7AAF14B09AFA2 /* Pods-i9School Challenges.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-i9School Challenges.release.xcconfig"; path = "Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +140,7 @@
 		27D98730203B1380005B21CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				27D98738203B17B6005B21CB /* fonts */,
 				275BDCA4203B0F3200F8CBE7 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -156,6 +167,18 @@
 				27D98731203B13AE005B21CB /* Supporting Files */,
 			);
 			path = "i9 Files";
+			sourceTree = "<group>";
+		};
+		27D98738203B17B6005B21CB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				27D9873B203B181E005B21CB /* ItauText_A_Bd.ttf */,
+				27D9873C203B181E005B21CB /* ItauText_A_Lt.ttf */,
+				27D9873D203B181E005B21CB /* ItauText_A_Rg.ttf */,
+				27D9873E203B181E005B21CB /* ItauText_A_XBd.ttf */,
+				27D98739203B17F3005B21CB /* itaufonts_master_24px_v1.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		87AACA6BF92867D33EA2F6D8 /* Pods */ = {
@@ -236,9 +259,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D98740203B181E005B21CB /* ItauText_A_Lt.ttf in Resources */,
 				27D98737203B14C4005B21CB /* Home.storyboard in Resources */,
 				275BDCA8203B0F3200F8CBE7 /* LaunchScreen.storyboard in Resources */,
+				27D98742203B181E005B21CB /* ItauText_A_XBd.ttf in Resources */,
+				27D98741203B181E005B21CB /* ItauText_A_Rg.ttf in Resources */,
+				27D9873F203B181E005B21CB /* ItauText_A_Bd.ttf in Resources */,
 				275BDCA5203B0F3200F8CBE7 /* Assets.xcassets in Resources */,
+				27D9873A203B17F3005B21CB /* itaufonts_master_24px_v1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
