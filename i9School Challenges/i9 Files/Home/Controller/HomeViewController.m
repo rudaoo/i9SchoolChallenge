@@ -9,6 +9,11 @@
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *kidsImageView;
+
+@property (nonatomic, strong) NSArray *kidsImageArray;
+@property (nonatomic) int imagePosition;
 
 @end
 
@@ -17,6 +22,47 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.kidsImageArray = [NSArray arrayWithObjects:@"ipad2", @"ipad3", @"ipad4", @"ipad1",  nil];
+    self.logoImageView.layer.masksToBounds = YES;
+    self.kidsImageView.layer.masksToBounds = YES;
+    self.imagePosition = 0;
+    [self fadeOffKidsImage];
+}
+
+
+-(void) fadeOffKidsImage {
+    
+    [UIView animateWithDuration:2 delay:4 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        [self.kidsImageView setAlpha:0.0f];
+        
+    } completion:^(BOOL finished) {
+        [self changeImage];
+        [self fadeInKidsImage];
+    }];
+}
+
+-(void) fadeInKidsImage {
+    
+    [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        [self.kidsImageView setAlpha:1.0f];
+        
+    } completion:^(BOOL finished) {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.4 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            
+            [self fadeOffKidsImage];
+        });
+    }];
+}
+
+-(void) changeImage {
+    
+    if (self.imagePosition > 3) {
+        self.imagePosition = 0;
+    }
+    [self.kidsImageView setImage:[UIImage imageNamed:[self.kidsImageArray objectAtIndex:self.imagePosition]]];
+    self.imagePosition++;
 }
 
 - (void)didReceiveMemoryWarning {
