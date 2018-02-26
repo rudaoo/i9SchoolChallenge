@@ -28,6 +28,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cN9-4f-1Ae">
                         <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BxZ-6J-Xdx" kind="relationship" relationship="rootViewController" id="mr0-nd-RG3"/>
@@ -37,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-500" y="141"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="kVJ-ys-O2m">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="BxZ-6J-Xdx" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="Home" id="BxZ-6J-Xdx" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fdf-KY-vg8">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +110,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="18"/>
                                         <state key="normal" title="Desafios">
-                                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -270,7 +273,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z76-jb-NKg"/>
                     </view>
-                    <navigationItem key="navigationItem" id="F3n-Ap-7A7"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="F3n-Ap-7A7"/>
                     <connections>
                         <outlet property="kidsImageView" destination="XMo-ga-kmN" id="jFK-Z5-5fa"/>
                         <outlet property="logoImageView" destination="gSw-8P-qEu" id="qvU-Cv-0ct"/>
@@ -285,4 +288,5 @@
         <image name="i9 Logo" width="170" height="143"/>
         <image name="ipad1" width="549" height="263"/>
     </resources>
+    <color key="tintColor" red="0.92549019607843142" green="0.4392156862745098" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
