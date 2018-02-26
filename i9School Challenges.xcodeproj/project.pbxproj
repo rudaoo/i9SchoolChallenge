@@ -11,6 +11,8 @@
 		2712063820444A4B002A803C /* ChallengeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2712063720444A4B002A803C /* ChallengeScreenViewController.m */; };
 		2712063A20444B3D002A803C /* ChallengeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2712063920444B3D002A803C /* ChallengeScreen.storyboard */; };
 		2712063D20444D84002A803C /* UIViewController+IPFUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2712063C20444D84002A803C /* UIViewController+IPFUtils.m */; };
+		27120641204482FD002A803C /* ChallengeMethodsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27120640204482FD002A803C /* ChallengeMethodsTableViewCell.m */; };
+		2712064320448314002A803C /* ChallengeMethodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2712064220448314002A803C /* ChallengeMethodsTableViewCell.xib */; };
 		275BDC9D203B0F3200F8CBE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 275BDC9C203B0F3200F8CBE7 /* AppDelegate.m */; };
 		275BDCA5203B0F3200F8CBE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275BDCA4203B0F3200F8CBE7 /* Assets.xcassets */; };
 		275BDCA8203B0F3200F8CBE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 275BDCA6203B0F3200F8CBE7 /* LaunchScreen.storyboard */; };
@@ -30,6 +32,9 @@
 		2712063920444B3D002A803C /* ChallengeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChallengeScreen.storyboard; sourceTree = "<group>"; };
 		2712063B20444D84002A803C /* UIViewController+IPFUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+IPFUtils.h"; sourceTree = "<group>"; };
 		2712063C20444D84002A803C /* UIViewController+IPFUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IPFUtils.m"; sourceTree = "<group>"; };
+		2712063F204482FD002A803C /* ChallengeMethodsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallengeMethodsTableViewCell.h; sourceTree = "<group>"; };
+		27120640204482FD002A803C /* ChallengeMethodsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChallengeMethodsTableViewCell.m; sourceTree = "<group>"; };
+		2712064220448314002A803C /* ChallengeMethodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChallengeMethodsTableViewCell.xib; sourceTree = "<group>"; };
 		275BDC98203B0F3200F8CBE7 /* i9School Challenges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "i9School Challenges.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		275BDC9B203B0F3200F8CBE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		275BDC9C203B0F3200F8CBE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,6 +74,16 @@
 				2712063C20444D84002A803C /* UIViewController+IPFUtils.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2712063E204482BE002A803C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				2712063F204482FD002A803C /* ChallengeMethodsTableViewCell.h */,
+				27120640204482FD002A803C /* ChallengeMethodsTableViewCell.m */,
+				2712064220448314002A803C /* ChallengeMethodsTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		275BDC8F203B0F3200F8CBE7 = {
@@ -145,6 +160,7 @@
 		27D9872E203B134C005B21CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2712063E204482BE002A803C /* cell */,
 				2712063920444B3D002A803C /* ChallengeScreen.storyboard */,
 			);
 			path = View;
@@ -284,6 +300,7 @@
 				27D98737203B14C4005B21CB /* Home.storyboard in Resources */,
 				275BDCA8203B0F3200F8CBE7 /* LaunchScreen.storyboard in Resources */,
 				27D98742203B181E005B21CB /* ItauText_A_XBd.ttf in Resources */,
+				2712064320448314002A803C /* ChallengeMethodsTableViewCell.xib in Resources */,
 				2712063A20444B3D002A803C /* ChallengeScreen.storyboard in Resources */,
 				27D98741203B181E005B21CB /* ItauText_A_Rg.ttf in Resources */,
 				27D9873F203B181E005B21CB /* ItauText_A_Bd.ttf in Resources */,
@@ -347,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27120641204482FD002A803C /* ChallengeMethodsTableViewCell.m in Sources */,
 				2712063820444A4B002A803C /* ChallengeScreenViewController.m in Sources */,
 				275BDCAB203B0F3200F8CBE7 /* main.m in Sources */,
 				275BDC9D203B0F3200F8CBE7 /* AppDelegate.m in Sources */,
