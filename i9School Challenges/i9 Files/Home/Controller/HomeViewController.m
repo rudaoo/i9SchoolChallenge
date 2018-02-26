@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "ChallengeScreenViewController.h"
 
 @interface HomeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
@@ -28,6 +29,12 @@
     self.kidsImageView.layer.masksToBounds = YES;
     self.imagePosition = 0;
     [self fadeOffKidsImage];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
 }
 
 
@@ -68,6 +75,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onButtonChallengeTapped:(id)sender {
+    
+    ChallengeScreenViewController *vc = [ChallengeScreenViewController initFromStoryboard:@"ChallengeScreen"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end
