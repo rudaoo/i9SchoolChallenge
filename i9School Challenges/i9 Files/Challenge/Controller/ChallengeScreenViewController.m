@@ -176,7 +176,11 @@
             [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:newindexPath] withRowAnimation:UITableViewRowAnimationNone];
         });
         
-        [self.tableView scrollToRowAtIndexPath:newindexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+        if ([self.actionsSequence count] > 0) {
+            
+            [self.tableView scrollToRowAtIndexPath:newindexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+        }
+        
     }
     else {
 

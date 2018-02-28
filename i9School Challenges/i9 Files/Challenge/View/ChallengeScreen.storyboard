@@ -175,10 +175,10 @@ Cgo
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6z-Kp-9fw">
-                                <rect key="frame" x="29" y="625.5" width="174" height="30"/>
+                                <rect key="frame" x="29" y="625.5" width="174" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="uwf-FZ-nV7"/>
+                                    <constraint firstAttribute="height" constant="45" id="uwf-FZ-nV7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ItauTextApp-Regular" family="Itau Text App" pointSize="17"/>
                                 <state key="normal" title="  MoverParaFrente( )  ">
@@ -198,10 +198,10 @@ Cgo
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-ga-Erj">
-                                <rect key="frame" x="258.5" y="625.5" width="174" height="30"/>
+                                <rect key="frame" x="258.5" y="625.5" width="174" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="EFD-Fi-C8h"/>
+                                    <constraint firstAttribute="height" constant="45" id="EFD-Fi-C8h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ItauTextApp-Regular" family="Itau Text App" pointSize="17"/>
                                 <state key="normal" title="  VirarParaDireita( )  ">
@@ -221,10 +221,10 @@ Cgo
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-sY-LOT">
-                                <rect key="frame" x="258.5" y="680.5" width="174" height="30"/>
+                                <rect key="frame" x="258.5" y="695.5" width="174" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Tbh-5x-twY"/>
+                                    <constraint firstAttribute="height" constant="45" id="Tbh-5x-twY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ItauTextApp-Regular" family="Itau Text App" pointSize="17"/>
                                 <state key="normal" title="  VirarParaEsquerda( )  ">
@@ -244,10 +244,10 @@ Cgo
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvx-Jt-2Oz">
-                                <rect key="frame" x="29" y="680.5" width="174" height="30"/>
+                                <rect key="frame" x="29" y="695.5" width="174" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NG5-Y5-Om5"/>
+                                    <constraint firstAttribute="height" constant="45" id="NG5-Y5-Om5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ItauTextApp-Regular" family="Itau Text App" pointSize="17"/>
                                 <state key="normal" title="  MoverParaTras( )  ">
