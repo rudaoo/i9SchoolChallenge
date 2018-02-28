@@ -144,16 +144,51 @@
     
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationRight];
     
-    [self.tableView scrollToRowAtIndexPath:newIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+    if ([self.actionsSequence count] > 2) {
+        
+         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.actionsSequence count]-2 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+         });
+    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+
+        [self.tableView scrollToRowAtIndexPath:newIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:TRUE];
+    });
 }
 
 -(void) eraseCarAction:(UIButton*) sender {
     
     CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    NSIndexPath *newindexPath = [NSIndexPath indexPathForRow:indexPath.row - 1 inSection:0];
 
-    [self.actionsSequence removeObjectAtIndex:indexPath.row];
-    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    
+    if (indexPath.row == ([self.actionsSequence count] - 1)) {
+        
+        [self.actionsSequence removeObjectAtIndex:indexPath.row];
+        
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            
+            NSIndexPath *newindexPath = [NSIndexPath indexPathForRow:indexPath.row - 1 inSection:0];
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:newindexPath] withRowAnimation:UITableViewRowAnimationNone];
+        });
+        
+        [self.tableView scrollToRowAtIndexPath:newindexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+    }
+    else {
+
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+
+            [self.actionsSequence removeObjectAtIndex:indexPath.row];
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        });
+    }
+    
 }
 
 
