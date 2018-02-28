@@ -17,6 +17,14 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *buildButtonLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *moveFowardButton;
+@property (weak, nonatomic) IBOutlet UIButton *moveBackButton;
+@property (weak, nonatomic) IBOutlet UIButton *turnRightButton;
+@property (weak, nonatomic) IBOutlet UIButton *turnLeftButton;
+
+@property (strong, nonatomic) NSMutableArray *actionsSequence;
+
+
 @end
 
 @implementation ChallengeScreenViewController
@@ -24,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self registerCellNibs];
+    self.actionsSequence = [[NSMutableArray alloc]init];
+    
     self.circleHintView.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.circleHintView2.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.circleHintView3.layer.borderColor = [[UIColor whiteColor] CGColor];
@@ -52,19 +62,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 4;
-    
+    return [self.actionsSequence count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     ChallengeMethodsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChallengeMethodsTableViewCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.methodNameLabel.text = [self.actionsSequence objectAtIndex:indexPath.row];
+    [cell.upperLittleArrow setHidden:NO];
+    [cell.bottonLittleArrow setHidden:NO];
+    [cell.eraseButton addTarget:self action:@selector(eraseCarAction:) forControlEvents:UIControlEventTouchUpInside];
+
     
     if (indexPath.row == 0) {
+        
         [cell.upperLittleArrow setHidden:YES];
     }
-    else if(indexPath.row == 3) {
+    else if(indexPath.row + 1 == ([self.actionsSequence count])) {
+        
         [cell.bottonLittleArrow setHidden:YES];
     }
    
@@ -101,6 +117,45 @@
         [self.buildButtonLabel setText:@"Rodar"];
     }
 }
+
+- (IBAction)onButtonCarActionPressed:(UIButton *)sender {
+    
+    if (sender == self.moveFowardButton) {
+        
+        [self.actionsSequence addObject:@"  MoverParaFrente( )  "];
+    }
+    else if (sender == self.moveBackButton) {
+        
+        [self.actionsSequence addObject:@"  MoverParaTras( )  "];
+
+    }
+    else if (sender == self.turnRightButton) {
+        
+        [self.actionsSequence addObject:@"  VirarParaDireita( )  "];
+
+    }
+    else if (sender == self.turnLeftButton) {
+        
+        [self.actionsSequence addObject:@"  VirarParaEsquerda( )  "];
+
+    }
+    
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[self.actionsSequence count]-1 inSection:0];
+    
+    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationRight];
+    
+    [self.tableView scrollToRowAtIndexPath:newIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
+}
+
+-(void) eraseCarAction:(UIButton*) sender {
+    
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+
+    [self.actionsSequence removeObjectAtIndex:indexPath.row];
+    [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+}
+
 
 
 @end

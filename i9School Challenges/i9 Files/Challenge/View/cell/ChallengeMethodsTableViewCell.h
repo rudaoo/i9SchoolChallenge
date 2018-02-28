@@ -11,5 +11,7 @@
 @interface ChallengeMethodsTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *upperLittleArrow;
 @property (weak, nonatomic) IBOutlet UIView *bottonLittleArrow;
+@property (weak, nonatomic) IBOutlet UILabel *methodNameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *eraseButton;
 
 @end

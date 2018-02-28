@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,7 +59,7 @@ Cgo
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboriset dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  nisi ut aliquip ex ea et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboriset dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  nisi ut aliquip ex ea et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="16" name="ItauTextApp-Regular"/>
@@ -194,6 +193,9 @@ Cgo
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonCarActionPressed:" destination="Pw3-7v-FOU" eventType="touchUpInside" id="kY9-o9-muF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLf-ga-Erj">
                                 <rect key="frame" x="258.5" y="625.5" width="174" height="30"/>
@@ -214,6 +216,9 @@ Cgo
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonCarActionPressed:" destination="Pw3-7v-FOU" eventType="touchUpInside" id="f0J-To-jhc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-sY-LOT">
                                 <rect key="frame" x="258.5" y="680.5" width="174" height="30"/>
@@ -234,6 +239,9 @@ Cgo
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonCarActionPressed:" destination="Pw3-7v-FOU" eventType="touchUpInside" id="0OP-Di-iAH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvx-Jt-2Oz">
                                 <rect key="frame" x="29" y="680.5" width="174" height="30"/>
@@ -254,6 +262,9 @@ Cgo
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonCarActionPressed:" destination="Pw3-7v-FOU" eventType="touchUpInside" id="0Q6-U0-xvq"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aS7-hc-YGs">
                                 <rect key="frame" x="462.5" y="127.5" width="561.5" height="490.5"/>
@@ -383,7 +394,11 @@ Cgo
                         <outlet property="circleHintView" destination="nLO-ms-pTp" id="6od-Lb-Hf2"/>
                         <outlet property="circleHintView2" destination="HGo-CO-7dk" id="q5H-CP-KkJ"/>
                         <outlet property="circleHintView3" destination="geM-SK-c6x" id="8AJ-b1-SOL"/>
+                        <outlet property="moveBackButton" destination="Xvx-Jt-2Oz" id="3nQ-Go-Fra"/>
+                        <outlet property="moveFowardButton" destination="b6z-Kp-9fw" id="aJT-5s-mVK"/>
                         <outlet property="tableView" destination="aS7-hc-YGs" id="H9h-t8-zYg"/>
+                        <outlet property="turnLeftButton" destination="oO6-sY-LOT" id="yaF-wA-8XU"/>
+                        <outlet property="turnRightButton" destination="jLf-ga-Erj" id="qGc-vf-pxL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEX-1X-2mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
