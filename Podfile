@@ -4,6 +4,7 @@ inhibit_all_warnings!
 
 def shared_pods
 pod 'Crashlytics'
+pod 'RestKit'
 end 
 
 target ‘i9School Challenges’ do

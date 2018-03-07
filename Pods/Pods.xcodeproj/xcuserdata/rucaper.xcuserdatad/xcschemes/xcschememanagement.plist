@@ -4,7 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ISO8601DateFormatterValueTransformer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-i9School Challenges.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RKValueTransformers.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RestKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SOCKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TransitionKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
