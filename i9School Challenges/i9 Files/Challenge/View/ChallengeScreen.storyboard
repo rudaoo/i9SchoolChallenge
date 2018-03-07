@@ -329,11 +329,18 @@ Cgo
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzj-x0-b4Y">
+                                <rect key="frame" x="789.5" y="648.5" width="218.5" height="60.5"/>
+                                <fontDescription key="fontDescription" name="ItauTextApp-XBold" family="Itau Text App" pointSize="47"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.4392156862745098" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Xvx-Jt-2Oz" firstAttribute="top" secondItem="b6z-Kp-9fw" secondAttribute="bottom" constant="25" id="13a-ib-Cuw"/>
                             <constraint firstItem="uux-z8-y2h" firstAttribute="trailing" secondItem="aS7-hc-YGs" secondAttribute="trailing" id="1GC-Ka-tJf"/>
+                            <constraint firstItem="gzj-x0-b4Y" firstAttribute="leading" secondItem="kWT-PN-U3A" secondAttribute="trailing" constant="16" id="1av-hb-dQ4"/>
                             <constraint firstItem="uux-z8-y2h" firstAttribute="bottom" secondItem="kWT-PN-U3A" secondAttribute="bottom" constant="60" id="3Yu-SL-gwR"/>
                             <constraint firstItem="oO6-sY-LOT" firstAttribute="centerY" secondItem="Xvx-Jt-2Oz" secondAttribute="centerY" id="3p7-0U-ZX8"/>
                             <constraint firstItem="mgq-06-lX3" firstAttribute="trailing" secondItem="dAv-ho-mNd" secondAttribute="trailing" id="4fA-2f-GcW"/>
@@ -360,6 +367,7 @@ Cgo
                             <constraint firstItem="jLf-ga-Erj" firstAttribute="trailing" secondItem="oah-vW-ayZ" secondAttribute="trailing" constant="-3" id="TBT-ko-gDz"/>
                             <constraint firstItem="Iyl-Cy-fvx" firstAttribute="top" secondItem="kWT-PN-U3A" secondAttribute="bottom" constant="5" id="TG8-S7-dpV"/>
                             <constraint firstItem="aij-xJ-MNT" firstAttribute="leading" secondItem="t8B-d3-v9l" secondAttribute="trailing" constant="26" id="WHL-l7-ONa"/>
+                            <constraint firstItem="uux-z8-y2h" firstAttribute="trailing" secondItem="gzj-x0-b4Y" secondAttribute="trailing" constant="16" id="ZM1-BU-q4V"/>
                             <constraint firstItem="b6z-Kp-9fw" firstAttribute="top" secondItem="oah-vW-ayZ" secondAttribute="bottom" constant="35" id="a9n-Ve-QHv"/>
                             <constraint firstItem="b6z-Kp-9fw" firstAttribute="leading" secondItem="oah-vW-ayZ" secondAttribute="leading" constant="3" id="biL-2g-aFs"/>
                             <constraint firstItem="jLf-ga-Erj" firstAttribute="centerY" secondItem="b6z-Kp-9fw" secondAttribute="centerY" id="c9J-5v-JeQ"/>
@@ -383,6 +391,7 @@ Cgo
                             <constraint firstItem="aij-xJ-MNT" firstAttribute="top" secondItem="vNi-cw-Xfx" secondAttribute="top" id="met-Zc-SxP"/>
                             <constraint firstItem="t8B-d3-v9l" firstAttribute="leading" secondItem="7Jc-1d-tdi" secondAttribute="trailing" constant="6" id="ndp-EQ-EGY"/>
                             <constraint firstItem="oah-vW-ayZ" firstAttribute="leading" secondItem="uux-z8-y2h" secondAttribute="leading" constant="26" id="oyB-d2-EAz"/>
+                            <constraint firstItem="gzj-x0-b4Y" firstAttribute="centerY" secondItem="kWT-PN-U3A" secondAttribute="centerY" id="sBc-fr-jw9"/>
                             <constraint firstItem="kWT-PN-U3A" firstAttribute="centerX" secondItem="aS7-hc-YGs" secondAttribute="centerX" id="uB3-VS-Y5L"/>
                             <constraint firstItem="7Jc-1d-tdi" firstAttribute="bottom" secondItem="vNi-cw-Xfx" secondAttribute="bottom" id="vie-CM-QYU"/>
                             <constraint firstAttribute="bottom" secondItem="t8B-d3-v9l" secondAttribute="bottom" id="ypA-h3-8X2"/>
@@ -398,6 +407,7 @@ Cgo
                         <outlet property="moveBackButton" destination="Xvx-Jt-2Oz" id="3nQ-Go-Fra"/>
                         <outlet property="moveFowardButton" destination="b6z-Kp-9fw" id="aJT-5s-mVK"/>
                         <outlet property="tableView" destination="aS7-hc-YGs" id="H9h-t8-zYg"/>
+                        <outlet property="timerLabel" destination="gzj-x0-b4Y" id="s2E-Dw-Kix"/>
                         <outlet property="turnLeftButton" destination="oO6-sY-LOT" id="yaF-wA-8XU"/>
                         <outlet property="turnRightButton" destination="jLf-ga-Erj" id="qGc-vf-pxL"/>
                     </connections>
