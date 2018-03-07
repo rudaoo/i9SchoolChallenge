@@ -269,6 +269,7 @@ Cgo
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aS7-hc-YGs">
                                 <rect key="frame" x="462.5" y="127.5" width="561.5" height="490.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.92549019607843142" green="0.4392156862745098" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Pw3-7v-FOU" id="erm-bb-9dj"/>
                                     <outlet property="delegate" destination="Pw3-7v-FOU" id="yhS-de-T1a"/>

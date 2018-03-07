@@ -38,6 +38,7 @@
     self.circleHintView2.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.circleHintView3.layer.borderColor = [[UIColor whiteColor] CGColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.tableView setEditing:YES];
     [self.tableView reloadData];
     // Do any additional setup after loading the view.
 }
@@ -86,6 +87,26 @@
    
     
     return cell;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleNone;
+}
+
+- (BOOL)tableView:(UITableView *)tableview shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    
+    NSString *stringToMove = [self.actionsSequence objectAtIndex:sourceIndexPath.row];
+    [self.actionsSequence removeObjectAtIndex:sourceIndexPath.row];
+    [self.actionsSequence insertObject:stringToMove atIndex:destinationIndexPath.row];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -19,7 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChallengeMethodsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChallengeMethodsTableViewCell" rowHeight="71" id="Yj0-x9-liQ" customClass="ChallengeMethodsTableViewCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChallengeMethodsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="ChallengeMethodsTableViewCell" rowHeight="71" id="Yj0-x9-liQ" customClass="ChallengeMethodsTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yj0-x9-liQ" id="IbM-DY-cJY">
@@ -201,6 +201,7 @@
                     <constraint firstItem="lUI-DO-ZgW" firstAttribute="centerY" secondItem="mF6-lf-9iZ" secondAttribute="centerY" id="zl0-yE-cvY"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="tintColor" red="0.92549019607843142" green="0.4392156862745098" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="bottonLittleArrow" destination="j4y-f2-YKb" id="zH0-qU-848"/>
                 <outlet property="eraseButton" destination="dCG-TS-vSZ" id="igT-3z-Ir1"/>
