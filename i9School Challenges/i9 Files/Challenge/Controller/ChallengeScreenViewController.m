@@ -316,8 +316,60 @@
 
 -(void) finishChallenge {
     
-    NSLog(@"%@", self.actionsSequence);
-    NSLog(@"%@", self.timerLabel.text);
+    NSDictionary *dict=@{@"CommandPlay" : @{
+                                 @"commands": @[@{
+                                                    @"command": @"back",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"left",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"back",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"right",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"back",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"stop",
+                                                    @"time":@"3000"
+                                                    }]
+                         }
+                         };
+    
+    NSError *error;
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
+    NSURL *url = [NSURL URLWithString:@"http://carrinho-sandbox.getup.io/api/car/commands/play"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    [request setHTTPMethod:@"POST"];
+
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
+    [request setHTTPBody:postData];
+    
+    
+    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        NSLog(@"%@", response);
+    }];
+    
+    [postDataTask resume];
+
+
 }
 
 
@@ -390,6 +442,9 @@
                                                          userInfo:nil
                                                           repeats:YES];
 }
+
+
+
 
 
 

@@ -24,6 +24,7 @@
 		27D98740203B181E005B21CB /* ItauText_A_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D9873C203B181E005B21CB /* ItauText_A_Lt.ttf */; };
 		27D98741203B181E005B21CB /* ItauText_A_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D9873D203B181E005B21CB /* ItauText_A_Rg.ttf */; };
 		27D98742203B181E005B21CB /* ItauText_A_XBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27D9873E203B181E005B21CB /* ItauText_A_XBd.ttf */; };
+		C9272A3A2055B853004977BE /* DirectionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9272A392055B853004977BE /* DirectionsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		27D9873E203B181E005B21CB /* ItauText_A_XBd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ItauText_A_XBd.ttf; sourceTree = "<group>"; };
 		46A489EAB490400123213F2A /* libPods-i9School Challenges.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-i9School Challenges.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA82EC56EA7A0E2FAD9B9D4 /* Pods-i9School Challenges.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-i9School Challenges.debug.xcconfig"; path = "Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges.debug.xcconfig"; sourceTree = "<group>"; };
+		C9272A382055B853004977BE /* DirectionsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectionsModel.h; sourceTree = "<group>"; };
+		C9272A392055B853004977BE /* DirectionsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectionsModel.m; sourceTree = "<group>"; };
 		CC6A89CC7FD7AAF14B09AFA2 /* Pods-i9School Challenges.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-i9School Challenges.release.xcconfig"; path = "Pods/Target Support Files/Pods-i9School Challenges/Pods-i9School Challenges.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +127,7 @@
 		27D9872A203B1305005B21CB /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				27D9872F203B1350005B21CB /* Model */,
+				C9272A372055B82F004977BE /* Model */,
 				27D9872E203B134C005B21CB /* View */,
 				27D9872D203B1347005B21CB /* Controller */,
 			);
@@ -164,13 +167,6 @@
 				2712063920444B3D002A803C /* ChallengeScreen.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		27D9872F203B1350005B21CB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		27D98730203B1380005B21CB /* Resources */ = {
@@ -225,6 +221,15 @@
 				CC6A89CC7FD7AAF14B09AFA2 /* Pods-i9School Challenges.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9272A372055B82F004977BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9272A382055B853004977BE /* DirectionsModel.h */,
+				C9272A392055B853004977BE /* DirectionsModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F2B004139EEF530360B37B22 /* Frameworks */ = {
@@ -365,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27120641204482FD002A803C /* ChallengeMethodsTableViewCell.m in Sources */,
+				C9272A3A2055B853004977BE /* DirectionsModel.m in Sources */,
 				2712063820444A4B002A803C /* ChallengeScreenViewController.m in Sources */,
 				275BDCAB203B0F3200F8CBE7 /* main.m in Sources */,
 				275BDC9D203B0F3200F8CBE7 /* AppDelegate.m in Sources */,
