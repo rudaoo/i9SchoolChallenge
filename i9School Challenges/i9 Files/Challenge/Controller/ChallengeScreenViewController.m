@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 
 @property (strong, nonatomic) NSMutableArray *actionsSequence;
+@property (strong, nonatomic) NSMutableArray *finalActionSequence;
 @property (strong, nonatomic) NSTimer *stopWatchTimer;
 @property (strong, nonatomic) NSDate *startDate;
 @property (nonatomic) BOOL challengeRunning;
@@ -36,16 +37,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self registerCellNibs];
+    [self startTimer];
     self.actionsSequence = [[NSMutableArray alloc]init];
-    
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
-                                               initWithTarget:self action:@selector(longPressGestureRecognized:)];
-    [self.tableView addGestureRecognizer:longPress];
-
+    self.finalActionSequence = [[NSMutableArray alloc]init];
     
     self.circleHintView.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.circleHintView2.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.circleHintView3.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.challengeRunning = YES;
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
+                                               initWithTarget:self action:@selector(longPressGestureRecognized:)];
+    [self.tableView addGestureRecognizer:longPress];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self.tableView reloadData];
 
@@ -119,8 +122,8 @@
         
         [sender setSelected:YES];
         [self.buildButtonLabel setText:@"Parar"];
-        self.challengeRunning = YES;
-        [self startTimer];
+        self.challengeRunning = NO;
+        [self stopTimer];
         [self finishChallenge];
 
     }
@@ -128,8 +131,6 @@
         
         [sender setSelected:NO];
         [self.buildButtonLabel setText:@"Rodar"];
-        self.challengeRunning = NO;
-        [self stopTimer];
     }
 }
 
@@ -316,33 +317,37 @@
 
 -(void) finishChallenge {
     
-    NSDictionary *dict=@{@"CommandPlay" : @{
-                                 @"commands": @[@{
-                                                    @"command": @"back",
-                                                    @"time":@"3000"
-                                                    },
-                                                @{
-                                                    @"command": @"left",
-                                                    @"time":@"3000"
-                                                    },
-                                                @{
-                                                    @"command": @"back",
-                                                    @"time":@"3000"
-                                                    },
-                                                @{
-                                                    @"command": @"right",
-                                                    @"time":@"3000"
-                                                    },
-                                                @{
-                                                    @"command": @"back",
-                                                    @"time":@"3000"
-                                                    },
-                                                @{
-                                                    @"command": @"stop",
-                                                    @"time":@"3000"
-                                                    }]
+    [self.finalActionSequence removeAllObjects];
+    
+    for (int i = 0; i < [self.actionsSequence count]; i++) {
+        NSMutableDictionary * temporaryAction = [NSMutableDictionary dictionary];
+        
+        if ([[self.actionsSequence objectAtIndex:i] isEqualToString:@"  MoverParaFrente( )  "]) {
+            
+            [temporaryAction setObject:@"back" forKey:@"command"];
+            [self.finalActionSequence addObject:temporaryAction];
+        }
+        else if ([[self.actionsSequence objectAtIndex:i] isEqualToString:@"  MoverParaTras( )  "]) {
+            
+            [temporaryAction setObject:@"forward" forKey:@"command"];
+            [self.finalActionSequence addObject:temporaryAction];
+        }
+        else if ([[self.actionsSequence objectAtIndex:i] isEqualToString:@"  VirarParaDireita( )  "]) {
+            
+            [temporaryAction setObject:@"right" forKey:@"command"];
+            [self.finalActionSequence addObject:temporaryAction];
+        }
+        else if ([[self.actionsSequence objectAtIndex:i] isEqualToString:@"  VirarParaEsquerda( )  "]) {
+            
+            [temporaryAction setObject:@"left" forKey:@"command"];
+            [self.finalActionSequence addObject:temporaryAction];
+        }
+    }
+    
+    NSDictionary *dict = @{@"CommandPlay" : @{
+                                 @"commands": @[self.finalActionSequence]
                          }
-                         };
+                    };
     
     NSError *error;
     
@@ -352,21 +357,18 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];
-    
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
     [request setHTTPMethod:@"POST"];
 
     NSData *postData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];
     [request setHTTPBody:postData];
-    
-    
+
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        
+
         NSLog(@"%@", response);
     }];
-    
+
     [postDataTask resume];
 
 
