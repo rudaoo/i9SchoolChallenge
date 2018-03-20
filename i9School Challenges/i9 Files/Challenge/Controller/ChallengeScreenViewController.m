@@ -344,10 +344,33 @@
         }
     }
     
-    NSDictionary *dict = @{@"CommandPlay" : @{
-                                 @"commands": @[self.finalActionSequence]
-                         }
-                    };
+    NSDictionary *dict=@{@"CommandPlay" : @{
+                                 @"commands": @[@{
+                                                    @"command": @"back",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"right",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"back",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"right",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"back",
+                                                    @"time":@"3000"
+                                                    },
+                                                @{
+                                                    @"command": @"stop",
+                                                    @"time":@"3000"
+                                                    }]
+                                 }
+                         };
     
     NSError *error;
     
