@@ -52,9 +52,9 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">Seu carrinho, Relâmpago Marquinhos, adora correr pelas pistas de todo o mundo, vencendo a maioria das corridas, mas certo dia, após uma trágica tragédia, em sua ultima corrida, acabou preso misteriosamente em um labirinto magico.
-Ele por mais que procure, é incapaz de achar a saída sozinho e se sente muito triste por isto. Ele precisa da ajuda da sua equipe, para poder voltar a fazer o que mais ama na vida, participar de corridas pelo mundo.
-Neste primeiro desafio, você escrevera suas primeiras linhas de comando para mover Relâmpago Marquinhos pelo labirinto.
+                                        <mutableString key="content">Seu carrinho, i9Car, adora correr pelas pistas de todo o mundo, vencendo a maioria das corridas, mas certo dia, após uma trágica tragédia em sua ultima corrida, acabou preso misteriosamente em um labirinto magico.
+Ele por mais que procure, é incapaz de achar a saída sozinho e se sente muito triste por isto. Ele precisa da ajuda de sua equipe, para poder voltar a fazer o que mais ama na vida, participar de corridas pelo mundo.
+Neste primeiro desafio, você escrevera suas primeiras linhas de comando para mover i9Car pelo labirinto.
 </mutableString>
                                         <attributes>
                                             <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,8 +236,8 @@ Neste primeiro desafio, você escrevera suas primeiras linhas de comando para mo
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha os comandos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oah-vW-ayZ">
-                                <rect key="frame" x="26" y="567" width="409.5" height="23.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha os comandos :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oah-vW-ayZ">
+                                <rect key="frame" x="26" y="567" width="409.5" height="24"/>
                                 <fontDescription key="fontDescription" name="ItauTextApp-XBold" family="Itau Text App" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -343,8 +343,8 @@ Neste primeiro desafio, você escrevera suas primeiras linhas de comando para mo
                                     <outlet property="delegate" destination="Pw3-7v-FOU" id="yhS-de-T1a"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas linhas de comandos lógicos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aij-xJ-MNT">
-                                <rect key="frame" x="488.5" y="84" width="509.5" height="23.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suas linhas de comandos lógicos :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aij-xJ-MNT">
+                                <rect key="frame" x="488.5" y="84" width="509.5" height="24"/>
                                 <fontDescription key="fontDescription" name="ItauTextApp-XBold" family="Itau Text App" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
